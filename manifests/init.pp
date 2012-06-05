@@ -3,13 +3,5 @@
 # GPLv3
 
 class tmpwatch {
-    case $operatingsystem {
-        default: { include tmpwatch::base }
-    }
-}
-
-class tmpwatch::base {
-    package{'tmpwatch':
-        ensure => installed,
-    }
+  include tmpwatch::base
 }
